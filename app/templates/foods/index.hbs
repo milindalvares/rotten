@@ -1,16 +1,26 @@
-{{link-to 'Add Food' 'foods.new'}}
+<ul>
+  <li>
+    {{link-to 'Add Food' 'foods.new'}}
+  </li>
+</ul>
 
-<table border="0" cellspacing="5" cellpadding="5">
-  <tr><th>Name</th></tr>
-  {{#each model as |food|}}
-    <tr><td>{{food.name}}</td></tr>
-  {{/each}}
-  <tr><th>Quantity</th></tr>
-  {{#each model as |food|}}
-    <tr><td>{{food.quantity}}</td></tr>
-  {{/each}}
-  <tr><th>Expiration Date</th></tr>
-  {{#each model as |food|}}
-    <tr><td>{{food.expiration}}</td></tr>
-  {{/each}}
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Expiration Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |food|}}
+      <tr>
+        <td>{{food.name}}</td>
+        <td>{{food.quantity}}</td>
+        <td>{{food.expiration}}</td>
+        <td><a href="#">Delete (Placeholder)</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>
