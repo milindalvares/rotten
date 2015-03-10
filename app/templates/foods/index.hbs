@@ -1,0 +1,16 @@
+{{link-to 'Add Food' 'foods.new'}}
+
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr><th>Name</th></tr>
+  {{#each model as |food|}}
+    <tr><td>{{food.name}}</td></tr>
+  {{/each}}
+  <tr><th>Quantity</th></tr>
+  {{#each model as |food|}}
+    <tr><td>{{food.quantity}}</td></tr>
+  {{/each}}
+  <tr><th>Expiration Date</th></tr>
+  {{#each model as |food|}}
+    <tr><td>{{food.expiration}}</td></tr>
+  {{/each}}
+</table>
