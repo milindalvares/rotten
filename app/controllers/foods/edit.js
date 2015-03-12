@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
         var newDate = new Date(this.get('date'));
         this.set('model.expiration', newDate);
         this.get('model').save();
-        this.set('date', '');
         this.transitionToRoute('foods.index');
       } else {
         this.set('model.errorMessage', 'You have to fill all the fields');

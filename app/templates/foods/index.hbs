@@ -5,6 +5,7 @@
       <th>Quantity</th>
       <th>Expiration Date</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +13,8 @@
       <tr>
         <td>{{food.name}}</td>
         <td>{{food.quantity}}</td>
-        <td>{{food.expiration}}</td>
+        <td>{{formatted-date food.expiration}}</td>
+        <td>{{link-to 'Edit' 'foods.edit' food}}</td>
         <td><a href="#" {{action 'delete' food}}>Delete</a></td>
       </tr>
     {{/each}}

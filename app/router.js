@@ -8,6 +8,10 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('foods', function(){
     this.route('new');
+
+    this.route('edit', {
+      path: ':food_id/edit'
+    });
   });
 });
 
