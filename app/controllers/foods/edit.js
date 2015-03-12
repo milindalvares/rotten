@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  date: '',
+  date: null,
   isValid: Ember.computed(
     'model.quantity',
     'model.name',
