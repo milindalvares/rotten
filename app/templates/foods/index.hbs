@@ -1,9 +1,3 @@
-<ul>
-  <li>
-    {{link-to 'Add Food' 'foods.new'}}
-  </li>
-</ul>
-
 <table class="primary">
   <thead>
     <tr>
@@ -19,7 +13,7 @@
         <td>{{food.name}}</td>
         <td>{{food.quantity}}</td>
         <td>{{food.expiration}}</td>
-        <td><a href="#">Delete (Placeholder)</a></td>
+        <td><a href="#" {{action 'delete' food}}>Delete</a></td>
       </tr>
     {{/each}}
   </tbody>

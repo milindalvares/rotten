@@ -1,0 +1,10 @@
+<form {{action "save" on="submit"}}>
+  <h2>{{model.errorMessage}}</h2>
+  <fieldset>
+    {{input type='text' value=model.name placeholder='Food Name'}}<br>
+    {{input type='number' value=model.quantity placeholder='Quantity'}}<br>
+    {{input type='date' value=date placeholder="Expiration Date"}}<br>
+    <input type="submit" value="Save" class="primary"/>
+    <button {{action "cancel"}} class="error">Cancel</button>
+  </fieldset>
+</form>
